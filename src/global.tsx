@@ -60,10 +60,28 @@ export default function GlobalStyles() {
       margin: 0;
       background-color: #f8fafc;
       font-family: Graphik-Regular;
-      height: 100%;
-      width: 100%;
-      min-height: 100vh;
-      min-width: 100%;
+    }
+
+    :not(input):not(textarea),
+    :not(input):not(textarea)::after,
+    :not(input):not(textarea)::before {
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: default;
+    }
+    input, button, textarea, :focus {
+        outline: none;
+    }
+
+    a:not([draggable=true]), img:not([draggable=true]) {
+      -webkit-user-drag: none;
+      user-drag: none;
+    }
+    a[href^="http://"],
+    a[href^="https://"],
+    a[href^="ftp://"] {
+        -webkit-user-drag: auto;
+        user-drag: auto;
     }
 
     *,
