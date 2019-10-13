@@ -28,7 +28,7 @@ jobs:
       - run: yarn test:ci
       - codecov/upload:
           file: coverage/*.json
-          flags: node-10
+          flags: node10
       - run: yarn build
       - run: yarn build-electron
   "node-latest":
