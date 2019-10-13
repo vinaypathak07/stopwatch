@@ -1,5 +1,8 @@
 # Stopwatch
 
+[![codecov](https://codecov.io/gh/Quadriphobs1/stopwatch/branch/master/graph/badge.svg)](https://codecov.io/gh/Quadriphobs1/stopwatch)
+[![CircleCI](https://circleci.com/gh/Quadriphobs1/stopwatch.svg?style=svg)](https://circleci.com/gh/Quadriphobs1/stopwatch)
+
 **A simple time logging application built with electron, typescript and react**
 
 ![Stopwatch demo](preview.png)
