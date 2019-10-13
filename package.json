@@ -9,7 +9,7 @@
     "start": "npm run build-electron && cross-env BROWSER=none nf start -p 3000",
     "build-electron": "tsc -p tsconfig.electron.json",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx --ignore-path .gitignore .",
-    "lint:ci": "eslint --ignore-path .gitignore --report-unused-disable-directives .",
+    "lint:ci": "eslint --ext .js,.ts,.tsx,.jsx --ignore-path .gitignore --report-unused-disable-directives .",
     "lint:fix": "npm run lint -- --fix",
     "electron-start": "node ./dist/start-react.js",
     "electron": "electron ./dist/main.js",
