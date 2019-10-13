@@ -1,0 +1,39 @@
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.4
+jobs:
+  "node-10":
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - node-v1-{{ .Branch }}-
+            - node-v1-
+      - run:
+          name: Install latest yarn
+          command: sudo npm i -g yarn@latest
+      - run:
+          name: Install dependencies
+          command: yarn
+      - save_cache:
+          paths:
+            - ~/usr/local/lib/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run: yarn lint:ci
+      - run: yarn tsc
+      - run: yarn test:ci
+      - codecov/upload:
+          file: coverage/*.json
+          flags: node10
+      - run: yarn build
+      - run: yarn build-electron
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "node-10"
