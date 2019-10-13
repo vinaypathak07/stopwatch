@@ -514,7 +514,7 @@ exports[`<Nav /> renders without correctly 1`] = `
       <div
         className="css-1hvap0d"
       >
-        tabs
+        children
       </div>
       <div
         className="css-16jk3lx"

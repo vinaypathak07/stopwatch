@@ -4,19 +4,17 @@ import { ThemeProvider } from 'emotion-theming';
 import theme from '../theme';
 import { Nav, NavFooter, LogoDropdown } from '../components/nav';
 
+const ThemeWrapper = (props: { children: ReactNode }) => (
+  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+);
+
 describe('<Nav />', () => {
-  let ThemeWrapper;
-  beforeEach(() => {
-    ThemeWrapper = (props: { children: ReactNode }) => (
-      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
-    );
-  });
   it('renders without correctly', () => {
     expect(
       renderer
         .create(
           <ThemeWrapper>
-            <Nav />
+            <Nav>children</Nav>
           </ThemeWrapper>,
         )
         .toJSON(),
