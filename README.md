@@ -2,6 +2,8 @@
 
 **A simple time logging application built with electron, typescript and react**
 
+![Stopwatch demo](preview.png)
+
 ## Requirement
 
 - `Node`: Any latest version of node above 8.9.0
