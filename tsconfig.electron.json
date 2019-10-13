@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "lib": ["es6", "dom", "es2017", "esnext"],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noErrorTruncation": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "pretty": true
+  },
+  "include": ["scripts/**/*"]
+}
