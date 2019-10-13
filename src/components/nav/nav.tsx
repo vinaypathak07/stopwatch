@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { ChevronDown } from 'react-feather';
 import {
   Menu,
@@ -14,7 +14,7 @@ import LogoDropdown from './logo-dropdown';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import NavFooter from './footer';
 
-export default function Nav() {
+export default function Nav(props: { children: ReactNode }) {
   return (
     <Menu>
       <MenuPrimary>
@@ -30,7 +30,7 @@ export default function Nav() {
               <ChevronDown strokeWidth={1} size={12} />
             </LogoArrow>
           </LogoWrapper>
-          <TabWrapper>tabs</TabWrapper>
+          <TabWrapper>{props.children}</TabWrapper>
           <NavFooter />
         </MenuContainer>
       </MenuPrimary>
