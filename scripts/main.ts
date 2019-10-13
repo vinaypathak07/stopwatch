@@ -12,9 +12,10 @@ function createWindow(): void {
     height: 700,
     minHeight: 600,
     minWidth: 600,
+    movable: true,
     show: false,
     title: 'Stopwatch',
-    titleBarStyle: 'hidden',
+    titleBarStyle: 'hiddenInset',
     useContentSize: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

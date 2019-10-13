@@ -2,7 +2,7 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": ["es6", "dom", "es2017", "esnext"],
     "moduleResolution": "node",
     "allowJs": true,

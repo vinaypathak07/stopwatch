@@ -17,6 +17,7 @@ plugins:
   - "@typescript-eslint/eslint-plugin"
   - "@typescript-eslint"
   - prettier
+  - emotion
 extends:
   - react-app
   # - standard
@@ -29,4 +30,6 @@ extends:
 settings:
   react:
     version: "detect"
-rules: {}
+rules: {
+  '@typescript-eslint/explicit-function-return-type': 'off'
+}
