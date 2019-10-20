@@ -4,10 +4,10 @@ import { Tabs, TabPanel } from 'react-tabs';
 import { Trello, Calendar } from 'react-feather';
 import theme from './theme';
 import GlobalStyles from './global';
-
 import { Nav } from './components/nav';
 import { PageContent } from './components/content';
 import { CustomTabList, CustomTabComponent } from './components/tab';
+import { Hourly } from './hourly';
 
 const App: React.FC = () => {
   const [tab, setTab] = useState(0);
@@ -27,21 +27,7 @@ const App: React.FC = () => {
         </Nav>
         <PageContent>
           <TabPanel>
-            <div className="App">
-              <header className="App-header">
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn React
-                </a>
-              </header>
-            </div>
+            <Hourly />
           </TabPanel>
           <TabPanel>
             <h2>Any content 2</h2>

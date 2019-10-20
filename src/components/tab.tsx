@@ -16,7 +16,8 @@ const CustomTab = styled(Tab)`
   margin: 0;
   padding: 0;
   width: 100%;
-  cursor: pointer;
+  height: 70px;
+  width: 70px;
 `;
 
 interface TabProps {
@@ -26,9 +27,9 @@ interface TabProps {
 const TabWrapper = styled.a`
   position: relative;
   display: inline-block;
-  height: 70px;
-  width: 70px;
-  line-height: 70px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
   white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
@@ -59,8 +60,10 @@ const TabInner = styled('div')<TabProps>(
     textAlign: 'center',
     borderRadius: '12px',
     transition: 'color 0.2s, background-color 0.2s',
+    cursor: 'pointer',
     '& svg': {
       verticalAlign: 'middle',
+      cursor: 'pointer',
     },
   },
   props => ({
