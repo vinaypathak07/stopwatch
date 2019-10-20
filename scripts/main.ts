@@ -1,10 +1,12 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import url from 'url';
+import createMenu from './menu';
 
 let mainWindow: Electron.BrowserWindow;
 
 function createWindow(): void {
+  createMenu();
   // Create the browser window.
   mainWindow = new BrowserWindow({
     center: true,
@@ -79,3 +81,5 @@ app.on('activate', () => {
 app.on('activate', (event: Electron.Event, hasVisibleWindows: boolean) => {
   console.log(event, hasVisibleWindows);
 });
+
+app.setName('Stopwatch');
