@@ -17,12 +17,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:watch": "react-scripts test --watch",
-    "test:coverage": "react-scripts test --verbose --coverage",
-    "test:ci": "npm run test:coverage -- --ci --maxWorkers=2 --reporters=default --silent",
+    "test:coverage": "react-scripts test --verbose --coverage --watchAll=false",
+    "test:ci": "npm run test:coverage --ci --maxWorkers=2 --reporters=default --silent",
     "eject": "react-scripts eject",
     "tsc:react": "tsc --noEmit --project ./tsconfig.json",
     "tsc:electron": "tsc --noEmit --project ./tsconfig.electron.json",
-    "tsc": "npm tun tsc:react & npm run tsc:electron"
+    "tsc": "npm run tsc:react & npm run tsc:electron"
   },
   "repository": {
     "type": "git",

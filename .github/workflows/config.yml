@@ -1,18 +1,35 @@
-name: build_test
+name: CI
 on: [push]
 jobs:
-  build_test_job:
-    runs-on: ubuntu-latest
-    container:
-      image:  node:10
+  test:
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+        platform: [ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Install latest yarn
-        run: sudo npm i -g yarn@latest
-      - name: Install dependencies
-        run: yarn
-      - run: yarn lint:ci
-      - run: yarn tsc
-      - run: yarn test:ci
-      - run: yarn build
-      - run: yarn build-electron
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - name: Eslint
+        run: yarn lint:ci
+        env:
+          CI: true
+      - name: Typescript check
+        run: yarn tsc
+      - name: Integration Test
+        run: yarn test:ci
+      - name: React Build
+        run: yarn build
+      - name: Electron build test
+        run: yarn build-electron
+      - name: codecov
+        run: npx codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
