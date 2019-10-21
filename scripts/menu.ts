@@ -58,8 +58,8 @@ export default function createMenu(): void {
               { type: 'separator' },
             ]
           : []),
-        { label: 'Normal View' },
-        { label: 'Minimized View' },
+        { label: 'Normal View', accelerator: 'CmdOrCtrl+1' },
+        { label: 'Minimized View', accelerator: 'CmdOrCtrl+2' },
         { type: 'separator' },
         { role: 'togglefullscreen' },
       ],
