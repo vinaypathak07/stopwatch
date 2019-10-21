@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "tsc:react": "tsc --noEmit --project ./tsconfig.json",
     "tsc:electron": "tsc --noEmit --project ./tsconfig.electron.json",
-    "tsc": "npm tun tsc:react & npm run tsc:electron"
+    "tsc": "npm run tsc:react & npm run tsc:electron"
   },
   "repository": {
     "type": "git",
