@@ -1,0 +1,18 @@
+name: build_test
+on: [push]
+jobs:
+  build_test_job:
+    runs-on: ubuntu-latest
+    container:
+      image:  node:10
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install latest yarn
+        run: sudo npm i -g yarn@latest
+      - name: Install dependencies
+        run: yarn
+      - run: yarn lint:ci
+      - run: yarn tsc
+      - run: yarn test:ci
+      - run: yarn build
+      - run: yarn build-electron
