@@ -16,7 +16,7 @@
     "react-start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:watch": "react-scripts test --watch",
+    "test:watch": "react-scripts test --watch --verbose",
     "test:coverage": "react-scripts test --verbose --coverage --watchAll=false",
     "test:ci": "npm run test:coverage --ci --maxWorkers=2 --reporters=default --silent",
     "eject": "react-scripts eject",
@@ -39,6 +39,7 @@
     "url": "https://github.com/Quadriphobs1"
   },
   "devDependencies": {
+    "@types/date-fns": "^2.6.0",
     "@types/electron": "^1.6.10",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
@@ -70,6 +71,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@emotion/styled": "^10.0.17",
+    "@types/react-textarea-autosize": "^4.3.4",
+    "date-fns": "^2.5.1",
     "emotion": "^10.0.17",
     "emotion-normalize": "^10.1.0",
     "emotion-theming": "^10.0.19",
@@ -78,6 +81,7 @@
     "react-feather": "^2.0.3",
     "react-scripts": "3.2.0",
     "react-tabs": "^3.0.0",
+    "react-textarea-autosize": "^7.1.0",
     "typescript": "^3.6.4"
   },
   "browserslist": {
