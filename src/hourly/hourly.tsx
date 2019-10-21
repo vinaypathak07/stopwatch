@@ -1,21 +1,13 @@
 import React from 'react';
+import DayGreetings from './day-greetings';
+import Calendar from './calendar';
 
 export default function Hourly() {
+  const hasCurrentDayTasks = false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Calendar />
+      {hasCurrentDayTasks ? <div>Show current day tasks</div> : <DayGreetings />}
     </div>
   );
 }

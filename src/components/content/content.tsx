@@ -12,6 +12,7 @@ const PageWrapper = styled.div`
   min-height: calc(100vh - 1px);
   transition: transform 0.6s, box-shadow 0.6s, -webkit-transform 0.6s;
   will-change: transform;
+  padding: 10px;
 `;
 
 const PageBackground = styled.div`
