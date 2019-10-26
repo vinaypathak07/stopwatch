@@ -23,3 +23,5 @@
 - [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
 ## How to set up the app and contribute to the project.
+
+  * Read [Contribution](https://github.com/Quadriphobs1/stopwatch/blob/master/contribution.md)
